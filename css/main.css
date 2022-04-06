@@ -1,0 +1,158 @@
+body {
+  font-family: "Archivo", sans-serif;
+  color: black;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Archivo", sans-serif;
+  border: 1px solid black;
+  background-image: url(../img/stripes.jpg);
+  background-size: cover;
+}
+
+h1 {
+  border: 5px solid black;
+  border-radius: 100px;
+  padding: 0px 20px 0 20px;
+  background-color: white;
+  font-size: 50px;
+  margin: 0px;
+  font-family: "Archivo", sans-serif;
+  font-weight: 200px;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+  border: 5px solid black;
+  border-radius: 100px;
+  padding: 5px 5px 0px 5px;
+  background-color: white;
+}
+
+.ham {
+  display: none;
+}
+
+.kit {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 20px;
+}
+#switcher {
+  list-style: none;
+  margin: 5px;
+  padding: 0;
+  overflow: hidden;
+}
+#switcher li {
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin: 0 70px 0px 70px;
+  border-radius: 30px;
+  border: 3px solid black;
+}
+
+#whiteButton {
+  background: white;
+}
+#blackButton {
+  background: black;
+}
+
+.selector,
+.selector-p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+}
+
+.home {
+  margin: 0 65px 0 0;
+  color: black;
+}
+
+.away {
+  margin: 0 0 0 65px;
+}
+.squad-header {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 40px;
+  margin: 20px;
+  text-decoration: underline;
+}
+.squad-row-one,
+.squad-row-two,
+.squad-row-three {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.gosling,
+.simpson,
+.fennelly,
+.aron,
+.gdeyu,
+.katanchian,
+.almond,
+.gilbertson,
+.downing {
+  width: 250px;
+  height: 200px;
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 10px;
+  color: white;
+  margin: 20px;
+}
+
+.gosling {
+  background-image: url(../img/Gosling.jpg);
+  background-size: cover;
+}
+.simpson {
+  background-image: url(../img/Simpson.jpg);
+  background-size: cover;
+}
+.fennelly {
+  background-image: url(../img/Fennelly.jpg);
+  background-size: cover;
+}
+
+.aron {
+  background-image: url(../img/Aron.jpg);
+  background-size: cover;
+}
+
+.gdeyu {
+  background-image: url(../img/Gdeyu.jpg);
+  background-size: cover;
+}
+
+.katanchian {
+  background-image: url(../img/Katanchian.jpg);
+  background-size: cover;
+}
+
+.almond {
+  background-image: url(../img/Almond.jpg);
+  background-size: cover;
+}
+
+.gilbertson {
+  background-image: url(../img/Gilbertson.jpg);
+  background-size: cover;
+}
+
+.downing {
+  background-image: url(../img/Downing.jpg);
+  background-size: cover;
+}
