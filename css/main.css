@@ -154,5 +154,5 @@ h1 {
 
 .downing {
   background-image: url(../img/Downing.jpg);
-  background-size: cover;
+  background-size: contain;
 }
