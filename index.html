@@ -1,15 +1,22 @@
-<head>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>London FC</title>
+    <meta name="description" content="London FC" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/main.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&family=Roboto:ital,wght@0,300;0,400;1,300&family=Shizuru&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/2eac926fbb.js" crossorigin="anonymous"></script>
 </head>
 <html>
   <header>
-    <img class="logo" id="logo" src="img\logo-white.jpg" alt="Logo" />
+    <img class="logo-left" id="logo" src="img\logo-white.jpg" alt="Logo" />
     <h1>London FC</h1>
-    <img class="logo" id="logo" src="img\logo-white.jpg" alt="Logo" />
+    <img class="logo-right" id="logo" src="img\logo-white.jpg" alt="Logo" />
     <img class="ham" id="ham" src="img\hamburger-light.png" alt="Hamburger" />
   </header>
   <body>
@@ -25,33 +32,38 @@
       </ul>
     </div>
     </section>
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="3000">
-          <img src="img/proof-we-actually-play.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
+    <div class="mobile-logo-div">
+      <img class="mobile-logo" src="img\logo-white.jpg" alt="mobile-logo">
+    </div>
+    <div class="carousel-hide">
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
         </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-          <img src="img/gaffer-watches-on.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-        </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-          <img src="img/team-bonding.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-        </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-          <img src="img/slabhead.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3000">
+            <img src="img/proof-we-actually-play.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+          </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+           <img src="img/gaffer-watches-on.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+          </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="img/team-bonding.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+          </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="img/team-photo.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+    </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -62,6 +74,7 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+    </div>
     <h2 class="squad-header">Meet The Squad</h2>
     <section class="squad">
       <div class="squad-row-one">
@@ -71,7 +84,7 @@
         <div class="simpson">
           <h3>8. Simpson</h3>
         </div>
-        <div class="fenNelly">
+        <div class="fennelly">
           <h3>1. Fennelly</h3>
         </div>
       </div>
@@ -98,14 +111,19 @@
         </div>
       </div>
     </section>
-    <section>
-      <div>
-        <h2>How it Stands</h2>
-        <img src="" alt="League Table" />
+    <section class="info">
+      <div class="standings">
+        <div class="info-header-icon">
+          <h2 class="info-h">How it Stands</h2>
+          <i class="fa-solid fa-chart-bar"></i>
+        </div>
+        <img src="img/league-table.PNG" alt="League Table" />
       </div>
-      <div>
-        <h2>Keep up to Date</h2>
-        <img src="" alt="League Table" />
+      <div class="twitter">
+        <div class="info-header-icon">
+          <h2 class="info-h">Keep up to Date</h2>
+          <i class="fa-brands fa-twitter-square"></i>
+        </div>
         <a
           class="twitter-timeline"
           data-width="400"
@@ -113,14 +131,6 @@
           href="https://twitter.com/ActualLondonFC?ref_src=twsrc%5Etfw"
           >Tweets by ActualLondonFC</a
         >
-        <a
-          class="twitter-timeline"
-          data-width="400"
-          data-height="600"
-          data-theme="dark"
-          href="https://twitter.com/ActualLondonFC?ref_src=twsrc%5Etfw"
-          >Tweets by ActualLondonFC</a
-        >
         <script
           async
           src="https://platform.twitter.com/widgets.js"
@@ -137,27 +147,37 @@
           charset="utf-8"
         ></script>
       </div>
-      <div>
-        <h2>What's coming up?</h2>
-        <img src="" alt="League Table" />
+      <div class="fixtures">
+        <div class="info-header-icon">
+          <h2 class="info-h">What's coming up?</h2>
+          <i class="fa-solid fa-futbol"></i>
+        </div>
+        <img src="img/fixture-five.PNG" alt="Upcoming Fixtures" />
       </div>
     </section>
-    <section>
-      <h3>Read our latest match report <a href="">here</a></h3>
-    </section>
-    <section>
-      <div>
+    <section class="forms">
+      <div class="form">
         <h3>Want to play for us?</h3>
         <p>Click below to submit our</p>
-        <button aria-haspopup="true">Trial Form</button>
+        <button class="show" aria-haspopup="true">Trial Form</button>
+        <div class="mask" role="dialog"></div>
+          <div class="modal" role="alert">
+            <button class="close" role="button">X</button>
+          </div>
       </div>
-      <div>
+      <div class="form">
+        <h3>Want to sponsor us?</h3>
         <p>Click below to submit our</p>
-        <button aria-haspopup="true">Sponsorship Form</button>
+        <button class="show" aria-haspopup="true">Sponsorship Form</button>
+        <div class="mask" role="dialog"></div>
+          <div class="modal" role="alert">
+            <button class="close" role="button">X</button>
+          </div>
       </div>
-      <div>
+      <div class="form">
+        <h3>Want to support/heckle us?</h3>
         <p>Click below to submit our</p>
-        <button class="show" aria-haspopup="true">Show Modal</button>
+        <button class="show" aria-haspopup="true">General Equiry Form</button>
         <div class="mask" role="dialog"></div>
           <div class="modal" role="alert">
             <button class="close" role="button">X</button>
@@ -169,8 +189,11 @@
     <script src="js/jquery-3.4.1.min.js"></script>
   </body>
   <footer>
-      <img class="logo" id="logo" src="img\logo-white.jpg" alt="Logo">
-      <h3>LLWLLLLLLLLLLLLLLLWLLL - Not a Welsh Town, just London FC's form.</h3>
-      <img class="logo" id="logo" src="img\logo-white.jpg" alt="Logo">
+    <img class="logo-left" id="logo" src="img\logo-white.jpg" alt="Logo" />
+    <h3 class="footer-text">LLWLLLLLLLLLLLLLLLWLLL - Not a Welsh Town, just London FC's form.</h3>
+    <img class="logo-right" id="logo" src="img\logo-white.jpg" alt="Logo" />
+    <img class="ham" id="ham" src="img\hamburger-light.png" alt="Hamburger" />
   </footer>
 </html>
+
+
