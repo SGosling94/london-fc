@@ -4,20 +4,27 @@
     <title>London FC</title>
     <meta name="description" content="London FC" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&family=Roboto:ital,wght@0,300;0,400;1,300&family=Shizuru&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/2eac926fbb.js" crossorigin="anonymous"></script>
-</head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&family=Roboto:ital,wght@0,300;0,400;1,300&family=Shizuru&display=swap" rel="stylesheet">
+    <script src="main.js" defer></script>
+    <script src="https://kit.fontawesome.com/2eac926fbb.js" crossorigin="anonymous"></script>
+  </head>
 <html>
   <header>
     <img class="logo-left" id="logo" src="img\logo-white.jpg" alt="Logo" />
     <h1>London FC</h1>
     <img class="logo-right" id="logo" src="img\logo-white.jpg" alt="Logo" />
-    <img class="ham" id="ham" src="img\hamburger-light.png" alt="Hamburger" />
+    <nav class="controls" id="menu-ham">
+      <img id="menu-hamburger" class="menu-control" src="img/hamburger-light.png">
+    </nav>
+    <aside class="menu">
+      <a href="https://twitter.com/ActualLondonFC?msclkid=f29194cbbb4211ec861b4c418abe22a0">@ActualLondonFC</a>
+      <a href="https://powerplay.co.uk/football/London-Camden/Haverstock-School/Thu-7s-7-a-side#league-table">Powerplay League Website</a>
+      <a href="#" id="menu-close">Close</a>
+    </aside>
   </header>
   <body>
     <section class="kit-container">
@@ -27,13 +34,13 @@
     </div>
     <div class="selector">
       <ul id="switcher">
-        <li id="whiteButton"></li>
-        <li id="blackButton"></li> 
+        <li class="homeAway" id="whiteButton">0</li>
+        <li class="homeAway" id="blackButton">1</li> 
       </ul>
     </div>
     </section>
     <div class="mobile-logo-div">
-      <img class="mobile-logo" src="img\logo-white.jpg" alt="mobile-logo">
+        <img class="mobile-logo" id="mobile-logo" src="img/logo-white.jpg" alt="London FC Logo">
     </div>
     <div class="carousel-hide">
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -42,18 +49,15 @@
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="3000">
             <img src="img/proof-we-actually-play.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-          </div>
+            <div class="carousel-caption d-none d-md-block"></div>
           </div>
           <div class="carousel-item" data-bs-interval="3000">
-           <img src="img/gaffer-watches-on.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-          </div>
+            <img src="img/gaffer-watches-on.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block"></div>
           </div>
           <div class="carousel-item" data-bs-interval="3000">
             <img src="img/team-bonding.jpg" class="d-block w-100" alt="...">
@@ -63,8 +67,8 @@
           <div class="carousel-item" data-bs-interval="3000">
             <img src="img/team-photo.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-    </div>
-      </div>
+          </div>
+          </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -87,7 +91,7 @@
         <div class="fennelly">
           <h3>1. Fennelly</h3>
         </div>
-      </div>
+        </div>
       <div class="squad-row-two">
         <div class="aron">
           <h3>7. Aron</h3>
@@ -112,87 +116,95 @@
       </div>
     </section>
     <section class="info">
-      <div class="standings">
+      <div class="standings" id="standings">
         <div class="info-header-icon">
           <h2 class="info-h">How it Stands</h2>
           <i class="fa-solid fa-chart-bar"></i>
         </div>
-        <img src="img/league-table.PNG" alt="League Table" />
+        <img class="info-img" src="img/league-table.PNG" alt="League Table" />
       </div>
-      <div class="twitter">
+      <div class="twitter" id="twitter">
         <div class="info-header-icon">
           <h2 class="info-h">Keep up to Date</h2>
           <i class="fa-brands fa-twitter-square"></i>
-        </div>
-        <a
-          class="twitter-timeline"
-          data-width="400"
-          data-height="600"
-          href="https://twitter.com/ActualLondonFC?ref_src=twsrc%5Etfw"
-          >Tweets by ActualLondonFC</a
-        >
-        <script
-          async
-          src="https://platform.twitter.com/widgets.js"
-          charset="utf-8"
-        ></script>
-        <script
-          async
-          src="https://platform.twitter.com/widgets.js"
-          charset="utf-8"
-        ></script>
-        <script
-          async
-          src="https://platform.twitter.com/widgets.js"
-          charset="utf-8"
-        ></script>
+        </div class="twitter-switcher" id="twitter-switcher">
+          <a class="twitter-timeline" data-width="400" data-height="400" data-theme="dark" href="https://twitter.com/ActualLondonFC?ref_src=twsrc%5Etfw">Tweets by ActualLondonFC</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
-      <div class="fixtures">
+      <div class="fixtures" id="fixtures">
         <div class="info-header-icon">
           <h2 class="info-h">What's coming up?</h2>
           <i class="fa-solid fa-futbol"></i>
         </div>
-        <img src="img/fixture-five.PNG" alt="Upcoming Fixtures" />
+        <img class="info-img" src="img/fixture-five.PNG" alt="Upcoming Fixtures" />
       </div>
     </section>
-    <section class="forms">
-      <div class="form">
-        <h3>Want to play for us?</h3>
+    <section class="forms" id="forms">
+      <div class="form" id="form">
+        <h3>Interested in playing for us, sponsoring us or coming down to watch our games?</h3>
         <p>Click below to submit our</p>
-        <button class="show" aria-haspopup="true">Trial Form</button>
-        <div class="mask" role="dialog"></div>
-          <div class="modal" role="alert">
-            <button class="close" role="button">X</button>
+        <button class="trial-button" id="trialModalBtn">General Enquiry Form</button>
+        <div class="trialModal" id="trialModal">
+          <div class="trial-modal-content">
+              <div class="trial-modal-header">
+                <h3>General Enquiry Form</h1>
+                <span class="trialCloseBtn">&times;</span>
+              </div>
+              <div class="trial-modal-body">
+                <form id="trial-form">
+                  <fieldset>
+                  <legend>Contact Info</legend>
+                  <div class="form-row">
+                    <label for="name">Your Name</label>
+                    <div class="name-fields">
+                      <input type="text" name="name[first]" placeholder="First" id="first-name" autofocus>
+                      <input type="text" name="name[last]" placeholder="Last" id="last-name">
+                    </div>
+                  <div class="form-row">
+                    <label for="phone">Phone Number</label>
+                    <div class="phone-number-fields">
+                      <input type="text" name="phone[area_code]" class="phone" maxlength="5" id="phone-area-code"> &mdash;
+                      <input type="text" name="phone[prefix]" class="phone" maxlength="6" id="phone-prefix">
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <label for="name">Your Email</label>
+                    <div class="name-fields">
+                      <input type="email" name="name[first]" placeholder="alanshearer@ga.com" id="email" autofocus>
+                    </div>
+                  </fieldset>
+                  <legend>Why are you getting in touch?</legend>
+                  <fieldset>
+                    <div class="form-row">
+                      <select id="enquiryReason">
+                        <option>Select</option>
+                        <option>Sponsorship Enquiry</option>
+                        <option>Trial Enquiry</option>
+                        <option>Social Media Collaboration</option>
+                        <option>To tell us we're sh*te</option>
+                      </select>
+                    </div>
+                    <div class="form-row">
+                      <label for="past-experience">Please detail your enquiry</label>
+                      <textarea name="past_experience" id="enquiry" placeholder=""></textarea>
+                    </div>
+                  </fieldset>
+                  <ul id="errors"></ul>
+                  <p id="feedback"></p>
+                  <fieldset>  
+                    <input type="submit" value="Submit">
+                  </fieldset>
+                </form>
+            </div>
           </div>
+        </div>
       </div>
-      <div class="form">
-        <h3>Want to sponsor us?</h3>
-        <p>Click below to submit our</p>
-        <button class="show" aria-haspopup="true">Sponsorship Form</button>
-        <div class="mask" role="dialog"></div>
-          <div class="modal" role="alert">
-            <button class="close" role="button">X</button>
-          </div>
-      </div>
-      <div class="form">
-        <h3>Want to support/heckle us?</h3>
-        <p>Click below to submit our</p>
-        <button class="show" aria-haspopup="true">General Equiry Form</button>
-        <div class="mask" role="dialog"></div>
-          <div class="modal" role="alert">
-            <button class="close" role="button">X</button>
-          </div>
-      </div>      
     </section>
-    <script src="js/code.js"></script>
+    <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
   </body>
   <footer>
-    <img class="logo-left" id="logo" src="img\logo-white.jpg" alt="Logo" />
     <h3 class="footer-text">LLWLLLLLLLLLLLLLLLWLLL - Not a Welsh Town, just London FC's form.</h3>
-    <img class="logo-right" id="logo" src="img\logo-white.jpg" alt="Logo" />
-    <img class="ham" id="ham" src="img\hamburger-light.png" alt="Hamburger" />
   </footer>
 </html>
 
